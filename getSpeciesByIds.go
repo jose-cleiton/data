@@ -1,5 +1,7 @@
 package data
 
+
+
 func GetSpeciesByIds(zoo Zoo, ids ...string) []Species {
   // Declare uma variável para armazenar as espécies encontradas
   var species []Species

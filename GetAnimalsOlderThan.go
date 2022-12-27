@@ -1,45 +1,6 @@
-package zoo
+package data
 
-type Resident struct {
-  Name string
-  Sex  string
-  Age  int
-}
 
-type Species struct {
-  ID          string
-  Name        string
-  Popularity  int
-  Location    string
-  Availability []string
-  Residents   []Resident
-}
-
-type Employee struct {
-  ID          string
-  FirstName   string
-  LastName    string
-  Managers    []string
-  ResponsibleFor []string
-}
-
-type Hours struct {
-  Open  int
-  Close int
-}
-
-type Prices struct {
-  Adult  float64
-  Senior float64
-  Child  float64
-}
-
-type Zoo struct {
-  Species    []Species
-  Employees  []Employee
-  Hours      map[string]Hours
-  Prices     Prices
-}
 func GetAnimalsOlderThan(zoo Zoo, speciesName string, minAge int) bool {
   // Percorra a lista de espécies do zoológico
   for _, s := range zoo.Species {
